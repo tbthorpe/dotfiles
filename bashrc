@@ -109,11 +109,16 @@ export EDITOR=/usr/local/bin/vim
 export PYTHONSTARTUP=~/.pythonrc.py
 export DJANGO_COLORS='light'
 
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-elif [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
-    source /usr/local/share/python/virtualenvwrapper.sh
-fi
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Sites
+# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+source /usr/local/bin/virtualenvwrapper.sh
+# if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+#     source /usr/local/bin/virtualenvwrapper.sh
+# elif [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
+#     source /usr/local/share/python/virtualenvwrapper.sh
+# fi
 
 # helpful bash functions
 external_ip () {

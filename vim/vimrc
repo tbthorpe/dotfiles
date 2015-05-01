@@ -23,8 +23,9 @@ endif
 if has("syntax")
     " Enable syntax highlighting
     syntax enable
+    set background=dark
     " Set 16 color terminal support
-    let g:solarized_termcolors = 16
+    let g:solarized_termcolors = 256 
     " Set colorscheme
     silent! colorscheme solarized
 endif
